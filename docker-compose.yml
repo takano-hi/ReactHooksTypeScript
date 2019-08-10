@@ -1,10 +1,13 @@
 version: "2"
 services:
   react:
-    build: ./docker/node
+    build: ./docker/react
     environment:
       - PORT=8000
     volumes:
-      - ./:/usr/src/app
+      - ./react:/app
+      - node-modules:/app/node_modules
     ports:
       - "8000:8000"
+volumes:
+  node-modules:
