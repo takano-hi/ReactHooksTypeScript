@@ -2,6 +2,7 @@ version: "2"
 services:
   react:
     build: ./docker/react
+    command: yarn start
     environment:
       - PORT=8000
     volumes:
