@@ -15,7 +15,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app", "react-hooks"],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/echaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -34,6 +38,7 @@
     "@types/node": "^12.7.1",
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.8.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^1.18.2",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
