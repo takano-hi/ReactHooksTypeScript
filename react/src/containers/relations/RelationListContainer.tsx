@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 const RelationListContainer: React.FC = () => <h1>RelationListContainer</h1>;
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 const MessageListContainer: React.FC = () => <h1>MessageListContainer</h1>;
 
