@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import withLoading from '../composers/withLoading';
 import UserListContainer from '../containers/users/UserListContainer';
@@ -18,13 +18,13 @@ const MyPageContainer = React.lazy(() =>
 );
 
 const Routes: React.FC = () => (
-  <>
+  <Switch>
     <Route exact path="/" component={withLoading(UserListContainer)} />
     <Route path="/users/:userId" component={withLoading(UserDetailContainer)} />
     <Route path="/messages" component={withLoading(MessageListContainer)} />
     <Route path="/relations" component={withLoading(RelationListContainer)} />
     <Route path="/mypage" component={withLoading(MyPageContainer)} />
-  </>
+  </Switch>
 );
 
 export default Routes;
