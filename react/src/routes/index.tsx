@@ -19,7 +19,7 @@ const MyPageContainer = React.lazy(() =>
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route exact path="/" component={withLoading(UserListContainer)} />
+    <Route exact path="/" component={UserListContainer} />
     <Route path="/users/:userId" component={withLoading(UserDetailContainer)} />
     <Route path="/messages" component={withLoading(MessageListContainer)} />
     <Route path="/relations" component={withLoading(RelationListContainer)} />
